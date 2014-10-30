@@ -1,0 +1,36 @@
+{
+  "name": "react-gist",
+  "version": "0.0.0",
+  "description": "Github Gist React component",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tleunen/react-gist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tleunen/react-gist/issues"
+  },
+  "homepage": "https://github.com/tleunen/react-gist",
+  "keywords": [
+    "react",
+    "react-component",
+    "gist",
+    "github",
+    "iframe"
+  ],
+  "author": {
+    "name": "Tommy Leunen",
+    "email": "tommy.leunen@gmail.com",
+    "url": "http://tommyleunen.com/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.12.0"
+  },
+  "devDependencies": {
+    "reactify": "^0.15.2"
+  },
+  "scripts": {
+    "demo": "beefy demo/index.js --open -- -t reactify"
+  }
+}
