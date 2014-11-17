@@ -36,7 +36,7 @@ var Gist = React.createClass({
     },
 
     render: function() {
-        return React.DOM.iframe({
+        return React.createElement('iframe', {
             ref: 'iframe',
             width: '100%',
             frameBorder: 0,
