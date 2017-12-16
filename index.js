@@ -2,8 +2,10 @@
 
 var React = require('react');
 var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
 
-var Gist = React.createClass({
+
+var Gist = createReactClass({
     propTypes: {
         id: PropTypes.string.isRequired,
         file: PropTypes.string

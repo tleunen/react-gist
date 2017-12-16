@@ -1,5 +1,5 @@
 {
-  "name": "react-gist-burkov",
+  "name": "react-gist",
   "version": "1.1.1",
   "description": "Github Gist React component",
   "main": "index.js",
@@ -25,8 +25,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "react": "~16",
-    "prop-types": "~15"
+    "create-react-class": "^15.6.2",
+    "prop-types": "~15",
+    "react": "~16"
   },
   "devDependencies": {
     "reactify": "^0.15.2"
