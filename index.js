@@ -1,11 +1,12 @@
 "use strict";
 
 var React = require('react');
+var PropTypes = require('prop-types');
 
 var Gist = React.createClass({
     propTypes: {
-        id: React.PropTypes.string.isRequired,
-        file: React.PropTypes.string
+        id: PropTypes.string.isRequired,
+        file: PropTypes.string
     },
 
     shouldComponentUpdate: function(nextProps) {
