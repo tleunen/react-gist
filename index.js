@@ -31,7 +31,7 @@ var Gist = createReactClass({
     },
 
     _updateIframeContent: function() {
-        var iframe = this.refs.iframe.getDOMNode();
+        var iframe = this.refs.iframe;
 
         var doc = iframe.document;
         if (iframe.contentDocument) doc = iframe.contentDocument;
