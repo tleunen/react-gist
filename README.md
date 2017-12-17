@@ -34,20 +34,10 @@ React.render(
 
 ## Usage
 
-### `<Gist id={string} />`
+### `<Gist id={string} file={string} />`
 
 - `id` {string} Id of the gist
 - `file` {string} Name of a specific file in a multi-file gist
-
-## demo
-
-To run the demo, install beefy and browserify:
-
-`npm i beefy browserify -g`
-
-Then:
-
-`npm run demo`
 
 ## License
 
