@@ -1,5 +1,7 @@
-# Mac crap
-.DS_Store
-
-# NodeJS
-node_modules/
+/coverage
+/demo/dist
+/es
+/lib
+/node_modules
+/umd
+npm-debug.log*

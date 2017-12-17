@@ -2,7 +2,12 @@
   "name": "react-gist",
   "version": "1.1.0",
   "description": "Github Gist React component",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "lib",
+    "es"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/tleunen/react-gist.git"
@@ -25,12 +30,22 @@
   },
   "license": "MIT",
   "dependencies": {
-    "react": "^0.12.0"
+    "prop-types": "^15.6.0"
   },
   "devDependencies": {
-    "reactify": "^0.15.2"
+    "nwb": "^0.20.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "peerDependencies": {
+    "react": "0.14.x || ^15.0.0-rc || ^16.0.0-rc"
   },
   "scripts": {
-    "demo": "beefy demo/index.js --open -- -t reactify"
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "start": "nwb serve-react-demo",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
   }
 }
