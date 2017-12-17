@@ -1,11 +1,14 @@
 "use strict";
 
 var React = require('react');
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
 
-var Gist = React.createClass({
+
+var Gist = createReactClass({
     propTypes: {
-        id: React.PropTypes.string.isRequired,
-        file: React.PropTypes.string
+        id: PropTypes.string.isRequired,
+        file: PropTypes.string
     },
 
     shouldComponentUpdate: function(nextProps) {
@@ -28,7 +31,7 @@ var Gist = React.createClass({
     },
 
     _updateIframeContent: function() {
-        var iframe = this.refs.iframe.getDOMNode();
+        var iframe = this.refs.iframe;
 
         var doc = iframe.document;
         if (iframe.contentDocument) doc = iframe.contentDocument;
