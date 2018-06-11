@@ -32,11 +32,30 @@ React.render(
 );
 ```
 
+Gist from URL:
+
+***NOTE: File cannot be parse from the URL. Supply as separate property.***
+
+```js
+var React = require('react');
+var Gist = require('react-gist');
+
+React.render(
+    <Gist url='https://gist.github.com/ringods/5995ea726914f280afb3' file='Chef-Dockerfile' />,
+    document.body
+);
+```
+
 ## Usage
 
 ### `<Gist id={string} file={string} />`
 
 - `id` {string} Id of the gist
+- `file` {string} Name of a specific file in a multi-file gist
+
+### `<Gist url={string} file={string} />`
+
+- `url` {string} URL of the gist
 - `file` {string} Name of a specific file in a multi-file gist
 
 ## License
