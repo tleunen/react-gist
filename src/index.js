@@ -1,3 +1,4 @@
+import url from 'url';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -11,7 +12,12 @@ class Gist extends React.PureComponent {
   }
 
   _defineUrl() {
-    const { id, file } = this.props;
+    let { id, file, url } = this.props;
+
+    if (url) {
+      const gistUrl = new URL(url);
+      id = gistUrl.pathname.split('/')[2];
+    }
 
     const fileArg = file ? `?file=${file}` : '';
 
@@ -27,7 +33,7 @@ class Gist extends React.PureComponent {
     if (iframe.contentDocument) doc = iframe.contentDocument;
     else if (iframe.contentWindow) doc = iframe.contentWindow.document;
 
-    const gistLink = this._defineUrl()
+    const gistLink = this._defineUrl();
     const gistScript = `<script type="text/javascript" src="${gistLink}"></script>`;
     const styles = '<style>*{font-size:12px;}</style>';
     const elementId = file ? `gist-${id}-${file}` : `gist-${id}`;

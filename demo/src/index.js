@@ -18,6 +18,10 @@ class Demo extends Component {
     setTimeout(() => {
       this.setState({id: '5995ea726914f280afb3', file: 'Chef-Dockerfile'});
     }, 5000);
+
+    setTimeout(() => {
+      this.setState({id: null, file: null, url: 'https://gist.github.com/ringods/5995ea726914f280afb3'});
+    }, 10000);
   }
 
   render() {
