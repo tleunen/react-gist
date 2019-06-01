@@ -4,6 +4,11 @@
 
 Use this component to add a github gist on your website.
 
+<p><details>
+  <summary><b>Preview</b></summary>
+  <p><img src="https://i.imgur.com/4EYDskB.png" /></p>
+</details></p>
+
 Get the id from the gist url `https://gist.github.com/{your_name}/{id}` and set it as a property of the component.
 
 ## Example
@@ -20,6 +25,8 @@ React.render(
 );
 ```
 
+[![Edit react-gist-example-single-file](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/reactgistexamplesinglefile-z9vkc?fontsize=14)
+
 Multi-file gist:
 
 ```js
@@ -31,6 +38,8 @@ React.render(
     document.body
 );
 ```
+
+[![Edit react-gist-example-multi-file](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/reactgistexamplemultifile-9rw4g?fontsize=14)
 
 ## Usage
 
