@@ -4,7 +4,9 @@
   "description": "Github Gist React component",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "types": "types",
   "files": [
+    "types/index.d.ts",
     "lib",
     "es"
   ],
