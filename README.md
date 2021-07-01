@@ -16,13 +16,10 @@ Get the id from the gist url `https://gist.github.com/{your_name}/{id}` and set 
 Single-file gist:
 
 ```js
-var React = require('react');
-var Gist = require('react-gist');
+var React = require("react");
+var Gist = require("react-gist");
 
-React.render(
-    <Gist id='5104372' />,
-    document.body
-);
+React.render(<Gist id="5104372" />, document.body);
 ```
 
 [![Edit react-gist-example-single-file](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/reactgistexamplesinglefile-z9vkc?fontsize=14)
@@ -30,12 +27,12 @@ React.render(
 Multi-file gist:
 
 ```js
-var React = require('react');
-var Gist = require('react-gist');
+var React = require("react");
+var Gist = require("react-gist");
 
 React.render(
-    <Gist id='5995ea726914f280afb3' file='Chef-Dockerfile' />,
-    document.body
+  <Gist id="5995ea726914f280afb3" file="Chef-Dockerfile" />,
+  document.body
 );
 ```
 
@@ -43,10 +40,11 @@ React.render(
 
 ## Usage
 
-### `<Gist id={string} file={string} />`
+### `<Gist id={string} file={string} title={title} />`
 
 - `id` {string} Id of the gist
 - `file` {string} Name of a specific file in a multi-file gist
+- `title` {title} Specific name of the <iframe> tag
 
 ## License
 
