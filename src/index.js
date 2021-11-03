@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 class Gist extends React.PureComponent {
   componentDidMount() {
@@ -13,7 +13,7 @@ class Gist extends React.PureComponent {
   _defineUrl() {
     const { id, file } = this.props;
 
-    const fileArg = file ? `?file=${file}` : '';
+    const fileArg = file ? `?file=${file}` : "";
 
     return `https://gist.github.com/${id}.js${fileArg}`;
   }
@@ -27,9 +27,9 @@ class Gist extends React.PureComponent {
     if (iframe.contentDocument) doc = iframe.contentDocument;
     else if (iframe.contentWindow) doc = iframe.contentWindow.document;
 
-    const gistLink = this._defineUrl()
+    const gistLink = this._defineUrl();
     const gistScript = `<script type="text/javascript" src="${gistLink}"></script>`;
-    const styles = '<style>*{font-size:12px;}</style>';
+    const styles = "<style>*{font-size:12px;}</style>";
     const elementId = file ? `gist-${id}-${file}` : `gist-${id}`;
     const resizeScript = `onload="parent.document.getElementById('${elementId}').style.height=document.body.scrollHeight + 'px'"`;
     const iframeHtml = `<html><head><base target="_parent">${styles}</head><body ${resizeScript}>${gistScript}</body></html>`;
@@ -40,14 +40,17 @@ class Gist extends React.PureComponent {
   }
 
   render() {
-    const { id, file } = this.props;
+    const { id, file, title } = this.props;
 
     return (
       <iframe
-        ref={(n) => { this.iframeNode = n; }}
+        ref={(n) => {
+          this.iframeNode = n;
+        }}
         width="100%"
         frameBorder={0}
         id={file ? `gist-${id}-${file}` : `gist-${id}`}
+        title={title}
       />
     );
   }
